@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Exemplos de Intents"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+
+        <!-- Atividades de exemplo de intent explícito -->
+        <activity
+            android:name=".explicito.ExExplicito"
+            android:exported="true"
+            android:label="Intent Explícito">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".explicito.ExExplicitoDetalhe"
+            android:label="Outra Atividade"
+            android:exported="false" />
+
+        <!-- Atividades de exemplo de intents implícitos -->
+        <activity
+            android:name=".implicito.ExImplicito"
+            android:exported="true"
+            android:label="Intents Implícito">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".implicito.ExImplicitoDetalhe"
+            android:label="Outra Atividade"
+            android:exported="false">
+            <!-- definição de nome aqui -->
+        </activity>
+
+        <!-- Atividades de exemplo de intents que passam parâmetros extras -->
+        <activity
+            android:name=".extras.ExExtras"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".extras.ExExtrasDetalhe"
+            android:exported="false" />
+
+        <!-- Exemplos de intents que são chamados esperando resposta -->
+        <activity
+        android:name=".resposta.ExResposta"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+            <activity
+                android:name=".resposta.ExRespostaDetalhe"
+                android:exported="false" />
+    </application>
+
+</manifest>
