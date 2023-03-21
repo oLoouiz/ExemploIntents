@@ -7,6 +7,11 @@ android {
     namespace 'br.senac.exemplointents'
     compileSdk 33
 
+    viewBinding{
+        enable true
+    }
+
+
     defaultConfig {
         applicationId "br.senac.exemplointents"
         minSdk 24
